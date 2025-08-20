@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Position Example (Mini)</title>
+<style>
+body {
+  height: 1200px; /* make page scrollable */
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Container to show absolute positioning */
+.container {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  border: 2px dashed gray;
+  margin-bottom: 30px;
+}
+
+/* Base box style */
+.box {
+  width: 100px;
+  height: 60px;
+  color: white;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+}
+
+/* Relative */
+.relative {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  background: orange;
+}
+
+/* Absolute */
+.absolute {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: red;
+}
+
+/* Fixed */
+.fixed {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: blue;
+}
+</style>
+</head>
+<body>
+
+<h2>Relative</h2>
+<div class="container">
+  <div class="box relative">Relative</div>
+</div>
+
+<h2>Absolute</h2>
+<div class="container">
+  <div class="box absolute">Absolute</div>
+</div>
+
+<h2>Fixed (scroll to test)</h2>
+<div class="box fixed">Fixed</div>
+
+<p style="margin-top:300px">
+  Scroll down ⬇️ to see how <b>Fixed</b> stays in place, while <b>Relative</b> and <b>Absolute</b> scroll away.
+</p>
+
+</body>
+</html>

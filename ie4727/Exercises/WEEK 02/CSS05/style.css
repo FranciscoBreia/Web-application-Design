@@ -1,0 +1,42 @@
+body { 
+  background-color: #FFFFFF; 
+  color: #191970; 
+  font-family: Arial, sans-serif;
+}
+
+h1 { 
+  background-color: #191970; 
+  color: #E6E6FA; 
+  margin-bottom: 0; 
+  padding: 10px;
+}
+
+h2 { 
+  color: #6A6AA7; 
+  margin-top: 20px;
+}
+
+nav { 
+  background-color: #E2E2EF; 
+  padding: 10px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #191970;
+  font-weight: bold;
+}
+
+.companyname { 
+  color: #6A6AA7; 
+  font-weight: bold;
+}
+
+footer { 
+  color: #666666; 
+  font-size: 0.9em; 
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}

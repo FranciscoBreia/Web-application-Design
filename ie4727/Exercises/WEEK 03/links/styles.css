@@ -1,0 +1,30 @@
+/* Default link (not visited yet) */
+a:link {
+  color: #000066; /* dark blue */
+  text-decoration: none; /* remove underline */
+}
+
+/* Link after it has been visited */
+a:visited {
+  color: #003366; /* darker shade */
+  
+}
+
+/* Link when it's selected/focused (keyboard tabbing or click focus) */
+a:focus {
+  color: #FF0000; /* red */
+  outline: 2px dashed #FF0000; /* add visible focus for accessibility */
+  
+}
+
+/* When hovering with the mouse */
+a:hover {
+  color: #0099CC; /* light blue */
+
+}
+
+/* When actively clicking the link (mouse down) */
+a:active {
+  color: #FF0000; /* red */
+  text-decoration: underline; /* underline when clicking */
+}

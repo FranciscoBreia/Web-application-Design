@@ -1,0 +1,31 @@
+/* 
+ Descendant Selector Example
+ ----------------------------
+ Use a descendant selector when you want to style elements 
+ ONLY if they are inside (nested within) a specific parent element.
+ Example: style <p> inside <header> differently from other <p> tags.
+*/
+
+header p {
+    color: blue;
+    font-style: italic;
+    font-size: 90%;
+}
+
+header {
+    background-color: #f0f8ff;
+    border: 2px solid black;
+    padding: 20px;  /* space inside */
+    margin: 30px;   /* space outside */
+    font-size: 90%;
+
+}
+
+main p {
+    font-size: 20px;
+}
+
+footer p {
+    color: green;
+    font-weight: bold;
+}

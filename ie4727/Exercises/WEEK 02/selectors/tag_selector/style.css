@@ -1,0 +1,23 @@
+/* Tag selector examples */
+/* Applied to All matching tags  */
+/* Reusibility : Global (every tag)  */
+
+body {
+    background-color: #f0f8ff; /* light blue background */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: darkgreen;
+    text-align: center;
+}
+
+h2 {
+    color: navy;
+}
+
+p {
+    color: darkred;
+    font-size: 18px;
+    line-height: 1.5;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Relative vs Absolute</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  height: 2000px; /* make the page scrollable */
+}
+
+.container {
+  position: relative;   /* important for absolute positioning */
+  border: 2px dashed gray;
+  width: 400px;
+  height: 400px;  /* bigger so the effect is more visible */
+  margin-bottom: 60px;
+  padding: 10px;
+  background: #f0f0f0;
+}
+
+/* Base style */
+.box {
+  width: 150px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+  font-size: 18px;
+}
+
+/* Relative example */
+.relative {
+  position: relative;
+  top: 80px;   /* move it more so it’s clear */
+  left: 50px;
+  background: orange;
+}
+
+/* Absolute example */
+.absolute {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  background: red;
+}
+</style>
+</head>
+<body>
+
+<h1>Relative vs Absolute Positioning</h1>
+
+<h2>Relative (Orange)</h2>
+<div class="container">
+  <p style="background: lightblue;">Text ABOVE the box.</p>
+  <div class="box relative">Relative</div>
+  <p style="background: lightgreen;">Text BELOW the box.</p>
+</div>
+
+<h2>Absolute (Red)</h2>
+<div class="container">
+  <p style="background: lightblue;">Text ABOVE the box.</p>
+  <div class="box absolute">Absolute</div>
+  <p style="background: lightgreen;">Text BELOW the box.</p>
+</div>
+
+<p>
+  Keep scrolling down to see how the red (absolute) and orange (relative) boxes behave differently
+  with respect to the text flow inside their containers.
+</p>
+
+</body>
+</html>
