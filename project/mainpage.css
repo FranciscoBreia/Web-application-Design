@@ -1,3 +1,6 @@
+
+
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -459,6 +462,7 @@ body {
 }
 
 .checkout-btn {
+  display: block;           /* make <a> or <button> behave like block */
   background: #d32f2f;
   color: white;
   border: none;
@@ -467,12 +471,19 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  width: 100%;
-  margin-top: 15px;
+  width: 60%;               /* not full width, looks more like a button */
+  max-width: 250px;         /* prevent it from becoming too wide */
+  margin: 40px auto 0 auto; /* TOP=40px pushes it down, auto centers */
+  text-align: center;       /* center text inside */
+  text-decoration: none;    /* remove underline if <a> */
 }
+
 .checkout-btn:hover {
   background: #b71c1c;
+  color: #fff;
+  text-decoration: none;
 }
+
 
 
 /* PRODUCT LINKS */
@@ -486,3 +497,235 @@ body {
   text-decoration: underline; /* underline only on hover if you want */
 }
 
+
+/* CHECKOUT FORM */
+.checkout-form {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 600px;
+}
+
+/* Section titles */
+.checkout-form h3 {
+  margin-top: 40px;               /* more spacing before each section */
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ec3118;
+  border-bottom: 2px solid #ec3118;
+  display: block;
+  padding-bottom: 4px;
+}
+
+.checkout-form h3:first-of-type {
+  margin-top: 10px;               /* don’t push first heading too far */
+}
+
+/* Labels */
+.checkout-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Inputs & Select */
+.checkout-form input,
+.checkout-form select {
+  width: 70%;                     /* a bit wider but still not 100% */
+  max-width: 400px;
+  padding: 8px 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect */
+.checkout-form input:focus,
+.checkout-form select:focus {
+  border-color: #ec3118;
+  box-shadow: 0 0 5px rgba(236,49,24,0.25);
+  outline: none;
+}
+
+/* Submit button */
+.checkout-form button {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: auto;                    /* don’t stretch across whole form */
+  min-width: 180px;               /* consistent size */
+  margin-top: 20px;
+  display: block;
+}
+
+.checkout-form button:hover {
+  background: #b71c1c;
+}
+
+
+
+/* CHECKOUT LAYOUT */
+.checkout-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start; /* make both columns align at the top */
+  flex-wrap: wrap;         /* stack on smaller screens */
+}
+
+.checkout-form {
+  flex: 2;
+  min-width: 300px;
+}
+
+.order-summary {
+  flex: 1;
+  min-width: 250px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* PRODUCT DETAIL PAGE */
+.product-detail-box {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-image img {
+  width: 380px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.product-info-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info-detail h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.product-info-detail p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.product-info-detail .price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #e53935;
+  margin: 20px 0 10px; /* tighten space above buttons */
+}
+
+/* Rating styling */
+.rating {
+  font-size: 18px;
+  margin: 12px 0;
+  color: #fbc02d; /* gold stars */
+}
+
+/* Action buttons */
+.product-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; /* stack buttons vertically */
+  gap: 12px;              /* spacing between them */
+  align-items: flex-start; /* align left under price */
+}
+
+.add-cart {
+  display: block; 
+  background: #ec3118;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-cart:hover {
+  background: #c62828;
+  transform: translateY(-2px);
+}
+
+.buy-now {
+  display: block;
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.buy-now:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+/* Product Tabs */
+.product-tabs {
+  margin-top: 40px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.product-tabs h3 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #ec3118;
+  font-size: 20px;
+  border-bottom: 2px solid #ec3118;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.product-tabs p,
+.product-tabs ul {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Customer Reviews */
+.product-tabs .review {
+  margin: 12px 0;
+  padding: 12px 15px;
+  background: #f9f9f9;
+  border-left: 4px solid #ec3118;
+  border-radius: 6px;
+}

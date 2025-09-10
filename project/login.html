@@ -38,7 +38,7 @@
       <h2>Login to Your Account</h2>
       <p>Enter your email and password to access your account.</p>
 
-      <form action="login_process.php" method="post" class="login-form">
+      <form action="login_process.php" method="post" class="login-form" onsubmit="return validateLoginForm()">
         <label for="email">Email Address</label><br>
         <input type="email" id="email" name="email" required><br><br>
 
@@ -64,5 +64,6 @@
     </p>
   </div>
 
+  <script src="validation.js"></script>
 </body>
 </html>

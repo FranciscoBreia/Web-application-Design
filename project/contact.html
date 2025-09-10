@@ -39,6 +39,7 @@
       <p>
         Have questions or need assistance? Get in touch with us through the form below
         or use the contact details provided.
+      
       </p>
 
       <h3>Our Contact Details</h3>
@@ -49,7 +50,7 @@
       </p>
 
       <h3>Send Us a Message</h3>
-      <form action="send_message.php" method="post" class="contact-form">
+      <form action="send_message.php" method="post" class="contact-form" onsubmit="return validateContactForm()">
         <label for="name">Full Name</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -75,5 +76,6 @@
     </p>
   </div>
 
+  <script src="validation.js"></script>
 </body>
 </html>
