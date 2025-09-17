@@ -153,6 +153,30 @@ body {
   background-color: #dc2222;
 }
 
+/* HERO Shop Now Button */
+.shop-now-btn {
+  display: inline-block;
+  background-color: #ec3118;  /* same orange-red as theme */
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;   /* remove underline */
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1;              /* make sure it’s above hero overlay */
+  position: relative;
+}
+
+.shop-now-btn:hover {
+  background-color: #dc2222; /* darker red */
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+
 /* PRODUCT GRID */
 .product-grid {
   display: grid;
