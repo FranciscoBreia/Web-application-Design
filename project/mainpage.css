@@ -102,8 +102,8 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  background-image: url("images/imagebg.png"); /* keep your hero image */
-  background-size: contain;     /* show full picture */
+  background-image: url("images/imagebg3.jpg"); /* replace with your image */
+  background-size: cover;      /* use cover for slideshow look */
   background-position: center;
   height: 300px;
   margin-bottom: 30px;
@@ -115,7 +115,10 @@ body {
   color: white;
   text-align: center;
   overflow: hidden;
+  transition: background-image 1s ease-in-out; /* smooth fade */
 }
+
+
 .hero::before {
   content: "";
   position: absolute;
