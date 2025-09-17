@@ -242,12 +242,13 @@ body {
 }
 
 /* PRODUCT ACTIONS */
+
 .product-actions {
   margin-top: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;   /* center horizontally */
 }
+
 .add-cart {
   background: #ec3118;
   color: white;
@@ -257,12 +258,15 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  width: 100%;
-  max-width: 200px;
+  width: auto;               /* let button size to content */
+  min-width: 160px;          /* keep consistency */
+  text-align: center;
 }
+
 .add-cart:hover {
   background: #dc2222;
 }
+
 
 /* FOOTER */
 
