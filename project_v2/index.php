@@ -66,6 +66,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="add_to_cart.php">
               <input type="hidden" name="product" value="TV LG OLED">
               <input type="hidden" name="price" value="1300">
+              <input type="hidden" name="image" value="images/tvoled.jpg">
               <button type="submit" class="add-cart">🛒 ADD TO CART</button>
             </form>
           </div>
@@ -88,6 +89,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="add_to_cart.php">
               <input type="hidden" name="product" value="iPhone 13">
               <input type="hidden" name="price" value="800">
+              <input type="hidden" name="image" value="images/iphone13.webp">
               <button type="submit" class="add-cart">🛒 ADD TO CART</button>
             </form>
           </div>
@@ -110,6 +112,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="add_to_cart.php">
               <input type="hidden" name="product" value="Marshall Major IV Wireless Headphones">
               <input type="hidden" name="price" value="200">
+              <input type="hidden" name="image" value="images/marshall.webp">
               <button type="submit" class="add-cart">🛒 ADD TO CART</button>
             </form>
           </div>
@@ -132,6 +135,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="add_to_cart.php">
               <input type="hidden" name="product" value="Apple Watch Series 11">
               <input type="hidden" name="price" value="400">
+              <input type="hidden" name="image" value="images/applewatch.webp">
               <button type="submit" class="add-cart">🛒 ADD TO CART</button>
             </form>
           </div>
@@ -157,6 +161,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="add_to_cart.php">
               <input type="hidden" name="product" value="Samsung Galaxy Watch">
               <input type="hidden" name="price" value="350">
+              <input type="hidden" name="image" value="images/galaxywatch.jpg">
               <button type="submit" class="add-cart">🛒 ADD TO CART</button>
             </form>
           </div>
@@ -177,6 +182,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="add_to_cart.php">
               <input type="hidden" name="product" value="Sony OLED TV">
               <input type="hidden" name="price" value="1200">
+              <input type="hidden" name="image" value="images/sonytv.jpg">
               <button type="submit" class="add-cart">🛒 ADD TO CART</button>
             </form>
           </div>
@@ -199,6 +205,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="add_to_cart.php">
               <input type="hidden" name="product" value="iPhone 15 Pro">
               <input type="hidden" name="price" value="1300">
+              <input type="hidden" name="image" value="images/iphone15pro.jpg">
               <button type="submit" class="add-cart">🛒 ADD TO CART</button>
             </form>
           </div>
@@ -219,6 +226,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="add_to_cart.php">
               <input type="hidden" name="product" value="JBL Bluetooth Speaker">
               <input type="hidden" name="price" value="150">
+              <input type="hidden" name="image" value="images/jblspeaker.jpg">
               <button type="submit" class="add-cart">🛒 ADD TO CART</button>
             </form>
           </div>
