@@ -67,9 +67,10 @@ $cartCount = array_sum(array_column($cart, 'qty'));
 
           <!-- Buttons -->
           <div class="product-actions">
-            <form method="post" action="../cart.php">
+            <form method="post" action="../add_to_cart.php">
               <input type="hidden" name="product" value="JBL Bluetooth Speaker">
               <input type="hidden" name="price" value="150">
+              <input type="hidden" name="image" value="images/jblspeaker.jpg">
               <button type="submit" class="add-cart-productzone">🛒 Add to Cart</button>
             </form>
           </div>
@@ -79,7 +80,7 @@ $cartCount = array_sum(array_column($cart, 'qty'));
       <!-- Tabs: Description, Specs, Reviews -->
       <div class="product-tabs">
         <h3>Description</h3>
-        <p>The JBL Bluetooth Speaker delivers powerful sound in a compact, portable design. It’s waterproof, lightweight, and perfect for outdoor use, pool parties, or everyday listening.</p>
+        <p>The JBL Bluetooth Speaker delivers powerful sound in a compact, portable design. It's waterproof, lightweight, and perfect for outdoor use, pool parties, or everyday listening.</p>
 
         <h3>Specifications</h3>
         <ul>

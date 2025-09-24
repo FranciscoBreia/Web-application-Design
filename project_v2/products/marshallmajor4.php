@@ -51,7 +51,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
 
         <!-- Right: Product Info -->
         <div class="product-info-detail">
-          <h2>Marshall Major IV Wireless Headphones</h2>
+          <h2>Marshall Major IV</h2>
           <p><strong>Color:</strong> Black</p>
           <p><strong>Brand:</strong> Marshall</p>
 
@@ -67,6 +67,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="../add_to_cart.php">
               <input type="hidden" name="product" value="Marshall Major IV">
               <input type="hidden" name="price" value="279">
+              <input type="hidden" name="image" value="images/marshall.webp">
               <button type="submit" class="add-cart">🛒 Add to Cart</button>
             </form>
           </div>

@@ -67,6 +67,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="../add_to_cart.php">
               <input type="hidden" name="product" value="Samsung Galaxy Watch 4">
               <input type="hidden" name="price" value="350">
+              <input type="hidden" name="image" value="images/galaxywatch.jpg">
               <button type="submit" class="add-cart">🛒 Add to Cart</button>
             </form>
           </div>

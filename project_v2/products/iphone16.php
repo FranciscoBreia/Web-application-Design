@@ -67,9 +67,10 @@ $cartCount = array_sum(array_column($cart, 'qty'));
 
           <!-- Buttons -->
           <div class="product-actions">
-            <form method="post" action="../cart.php">
+            <form method="post" action="../add_to_cart.php">
               <input type="hidden" name="product" value="iPhone 16">
               <input type="hidden" name="price" value="1300">
+              <input type="hidden" name="image" value="images/iphone16.png">
               <button type="submit" class="add-cart-productzone">🛒 Add to Cart</button>
             </form>
           </div>

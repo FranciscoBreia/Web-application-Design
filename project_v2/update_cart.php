@@ -21,3 +21,5 @@ foreach ($_SESSION['cart'] ?? [] as $item) {
 }
 
 echo $total;
+
+?>

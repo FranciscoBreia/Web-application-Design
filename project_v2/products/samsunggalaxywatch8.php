@@ -67,6 +67,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
             <form method="post" action="../add_to_cart.php">
               <input type="hidden" name="product" value="Samsung Galaxy Watch 8">
               <input type="hidden" name="price" value="577">
+              <input type="hidden" name="image" value="images/Samsunggalaxywatch8.jpg">
               <button type="submit" class="add-cart">🛒 Add to Cart</button>
             </form>
           </div>
@@ -76,7 +77,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
       <!-- Tabs: Description, Specs, Reviews -->
       <div class="product-tabs">
         <h3>Description</h3>
-        <p>The Samsung Galaxy Watch 8 offers advanced health tracking, smooth performance, and a durable design. With AMOLED display and One UI Watch, it’s your perfect fitness and lifestyle companion.</p>
+        <p>The Samsung Galaxy Watch 8 offers advanced health tracking, smooth performance, and a durable design. With AMOLED display and One UI Watch, it's your perfect fitness and lifestyle companion.</p>
 
         <h3>Specifications</h3>
         <ul>

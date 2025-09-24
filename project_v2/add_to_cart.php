@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$product = $_POST['product'] ?? null; // product name
+$product = $_POST['product'] ?? null; // product name , POST superglobal array is used to collect form data after submitting an HTML form with method="post"
 $price   = $_POST['price'] ?? null;   // product price
 $image   = $_POST['image'] ?? null;   // product image
 

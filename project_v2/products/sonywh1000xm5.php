@@ -64,9 +64,10 @@ $cartCount = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart']
 
           <!-- Buttons -->
           <div class="product-actions">
-            <form method="post" action="../add_to_cart.php"> <!-- fix: must call add_to_cart.php -->
+            <form method="post" action="../add_to_cart.php"> 
               <input type="hidden" name="product" value="Sony WH-1000XM5">
               <input type="hidden" name="price" value="270">
+              <input type="hidden" name="image" value="images/SonyWh-1000XM5.jpg">
               <button type="submit" class="add-cart">🛒 Add to Cart</button>
             </form>
           </div>
