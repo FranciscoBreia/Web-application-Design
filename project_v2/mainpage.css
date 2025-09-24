@@ -8,13 +8,15 @@ body {
   color: #333;
 }
 
+/*---------------------------------------------------------------*/
+
+
 /* HEADER */
 .header {
   background-color: #ec3118;   /* medium-dark red */
   color: white;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 29px 40px;
 }
 .header a {
@@ -27,15 +29,26 @@ body {
   text-decoration: underline;
 }
 
-/* CONTAINER LAYOUT */
+
+/*---------------------------------------------------------------*/
+
+
+
+/* CONTAINER LAYOUT (all content) */
 .container {
   display: flex;
-  align-items: flex-start;  /* sidebar aligns with top of content */
   margin: 20px;
 }
 
+/* MAIN CONTENT */
+.maincontent {
+  flex: 1;   /* take remaining space because of display:flex in container */
+}            /* because sidebar has fixed width */
 
-/* SIDEBAR */
+
+/*---------------------------------------------------------------*/
+
+
 /* SIDEBAR */
 .sidebar {
   width: 220px;
@@ -43,13 +56,9 @@ body {
   padding: 37px 0;
   border-radius: 8px;
   margin-right: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-
-  /* Sidebar should only be as tall as its content */
-  height: auto;
 }
 
-
+/* SIDEBAR name Categories */
 .sidebar h3 {
   color: #fff;
   text-align: center;
@@ -58,33 +67,34 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+/* SIDEBAR Categories (tvs,audio,wearables, smartphones) */
 .sidebar a {
   display: flex;
-  align-items: center;
   padding: 12px 20px;
   text-decoration: none;
   color: #fff;
   font-size: 15px;
   font-weight: 500;
-  transition: all 0.3s ease;
 }
+
+/* SIDEBAR transition white */
 .sidebar a:hover {
   background: rgba(255, 255, 255, 0.15);
   padding-left: 25px;
   color: #ffeaea;
 }
 
-/* MAIN CONTENT */
-.maincontent {
-  flex: 1;
-}
+
+
+/*---------------------------------------------------------------*/
 
 /* BREADCRUMB */
 .breadcrumb {
   background-color: #f9f9f9;
   padding: 10px 20px;
   font-size: 14px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; /* line below BREADCRUMB */
 }
 .breadcrumb a {
   text-decoration: none;
@@ -94,95 +104,87 @@ body {
 .breadcrumb a:hover {
   text-decoration: underline;
 }
+
+/* current page in BREADCRUMB , in front of Home */
 .breadcrumb span {
   color: #555;
   font-weight: bold;
 }
 
+
+/*---------------------------------------------------------------*/
+
 /* HERO */
 .hero {
-  position: relative;
-  background-image: url("images/imagebg3.jpg"); /* replace with your image */
+  position: relative; 
+  background-image: url("images/imagebg3.jpg");
   background-size: cover;      /* use cover for slideshow look */
   background-position: center;
   height: 300px;
   margin-bottom: 30px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* flexbox for centering */
+  flex-direction: column; /* stack vertically */
+  justify-content: center; /* center vertically */
+  align-items: center; /* center horizontally */
   color: white;
-  text-align: center;
-  overflow: hidden;
   transition: background-image 1s ease-in-out; /* smooth fade */
 }
 
 
 .hero::before {
-  content: "";
-  position: absolute;
+  content: ""; /* looks a bit larker with this the pictures for the contarst */
+  position: absolute; /* overlay */
   top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 100%; 
+  height: 100%;
   background: rgba(0,0,0,0.2);
   border-radius: 10px;
-  z-index: 0;
 }
+
 .hero h1,
 .hero button {
-  position: relative;
-  z-index: 1;
+  position: relative; /* above overlay (makes the text brighter)*/
 }
-.hero h1 {
-  font-size: 2.5rem;
+
+/* slogan text*/
+.hero h1 { 
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
-.hero button {
-  background-color: #ec3118;
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-}
-.hero button:hover {
-  background-color: #dc2222;
-}
 
 /* HERO Shop Now Button */
 .shop-now-btn {
-  display: inline-block;
   background-color: #ec3118;  /* same orange-red as theme */
   color: #fff;
-  border: none;
   padding: 14px 28px;
   border-radius: 8px;
-  cursor: pointer;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;   /* remove underline */
-  transition: background 0.3s ease, transform 0.2s ease;
-  z-index: 1;              /* make sure it’s above hero overlay */
-  position: relative;
+  transition: background 0.3s ease, transform 0.2s ease; /* smooth transition going up - hover */
+  position: relative; /* above overlay (makes the text brighter)*/
 }
 
 .shop-now-btn:hover {
   background-color: #dc2222; /* darker red */
-  transform: translateY(-2px);
+  transform: translateY(-2px); /* move up slightly */
   text-decoration: none;
 }
 
 
+/*---------------------------------------------------------------*/
+
 /* PRODUCT GRID */
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns, each taking up half of the grid container.*/
+  gap: 15px; /* gap between the columns */
 }
+
+/* BEST SELLERS SECTION */
 .best-sellers-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -191,22 +193,37 @@ body {
 
 /* PRODUCT BOX */
 .product-box {
-  position: relative;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  position: relative; /* for discount badge positioning */
+  background: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
   padding: 15px;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
+  text-align: center; /* center text */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* smooth hover transition effect */
+  display: flex; /* flexbox for vertical layout */
   flex-direction: column;
-  justify-content: space-between;
-  height: 420px;
+  justify-content: space-between; /* space between image, title, price */
+  height: 400px; /* fixed height for each box product */
 }
+
 .product-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+
+
+/* PRODUCT LINKS to the pages */
+.product-box a {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* keeps text color consistent */
+}
+
+.product-box a:hover {
+  color: #c62828;        /* optional: hover color change */
+  text-decoration: none; /* make sure underline doesn’t return */
+}
+
+
 
 /* PRODUCT IMAGES UNIFORM SIZE */
 .product-box img {
@@ -218,10 +235,42 @@ body {
 }
 
 
+/* Add to cart Button in product grid */
+.add-cart {
+  display: block; 
+  background: #ec3118;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-cart:hover {
+  background: #c62828;
+  transform: translateY(-2px);
+}
+
+
+/* Action button */
+
+/* Container for buttons - center the index.html and pages */
+.product-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; /* stack buttons vertically */
+  align-items: center;
+}
+
+/*---------------------------------------------------------------*/
+
 /* DISCOUNT BADGE */
 .discount-badge {
-  position: absolute;
-  top: 10px;
+  position: absolute; 
+  top: 10px; 
   right: 10px;
   background: #ffca28;
   color: #000;
@@ -231,16 +280,30 @@ body {
   border-radius: 20px;
 }
 
+
+/*---------------------------------------------------------------*/
+
+/* PRODUCT INFO (product-title and price-section) */
+.product-info {
+  display: flex; /* flexbox for vertical layout */
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+}
+
+/*---------------------------------------------------------------*/
+
 /* PRICE SECTION */
 .price-section {
-  margin-bottom: 6px;
+  margin-bottom: 15px;  /* space between price and name of the product */
 }
+
 .old-price {
-  display: block;
+  display: block; 
   font-size: 14px;
   color: #777;
   text-decoration: line-through;
 }
+
 .new-price {
   display: block;
   font-size: 20px;
@@ -248,25 +311,18 @@ body {
   color: #e53935;
 }
 
-/* PRODUCT INFO */
-.product-info {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+/*---------------------------------------------------------------*/
+
 
 /* PRODUCT TITLE */
 .product-title {
   font-size: 15px;
   font-weight: bold;
   margin: 5px 0 10px;
-  line-height: 1.4;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
 }
+
+
+/*---------------------------------------------------------------*/
 
 /* FOOTER */
 
@@ -287,16 +343,22 @@ body {
   color: #fff;
   text-decoration: underline;
 }
+
 .footer p {
   margin: 10px 0 0;
   font-size: 14px;
+  margin-left: 80px; /* center text in the middle of the webpage */
 }
 
-/* sign up */
+
+/*---------------------------------------------------------------*/
+
+
+/* SIGNUP */
 
 /* SIGNUP FORM */
 .signup-form {
-  max-width: 400px;
+  max-width: 400px; /* fixed width */
   background: #f9f9f9;
   padding: 50px;
   border-radius: 8px;
@@ -305,7 +367,8 @@ body {
   margin-top: 50px;
 }
 
-.signup-form input {
+/* Input fields (name,email,password) */
+.signup-form input { 
   width: 100%;
   padding: 10px;
   margin-top: 6px;
@@ -314,14 +377,13 @@ body {
   font-family: Arial, sans-serif;
 }
 
-
+/* SIGNUP  Red Button */
 .signup-btn {
   background: #d32f2f;
   color: white;
   border: none;
   padding: 12px 20px;
   border-radius: 8px;
-  cursor: pointer;
   font-size: 16px;
   font-weight: bold;
   width: 100%;
@@ -332,6 +394,7 @@ body {
   background: #b71c1c;
 }
 
+/* LOGIN LINK below SIGNUP button */
 .login-link {
   margin-top: 15px;
   font-size: 14px;
@@ -348,10 +411,13 @@ body {
 }
 
 
+/*---------------------------------------------------------------*/
+
+
 
 /* LOGIN FORM */
 .login-form {
-  max-width: 400px;
+  max-width: 400px; /* fixed width */
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
@@ -365,18 +431,18 @@ body {
   width: 100%;
   padding: 10px;
   margin-top: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* light gray thin border */
   border-radius: 5px;
   font-family: Arial, sans-serif;
 }
 
+/* LOGIN Red Button */
 .login-btn {
   background: #d32f2f;
   color: white;
   border: none;
   padding: 12px 20px;
   border-radius: 8px;
-  cursor: pointer;
   font-size: 16px;
   font-weight: bold;
   width: 100%;
@@ -387,6 +453,7 @@ body {
   background: #b71c1c;
 }
 
+/* SIGNUP LINK below LOGIN button */
 .signup-link {
   margin-top: 15px;
   font-size: 14px;
@@ -401,13 +468,17 @@ body {
   text-decoration: underline;
 }
 
-/* CART TABLE */
+/*---------------------------------------------------------------*/
+
+
+/* CART TABLE  (CART) */
 .cart-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /* remove space between borders */
   margin-bottom: 30px;
 }
 
+/* Table cells */
 .cart-table th, 
 .cart-table td {
   border: 1px solid #ddd;
@@ -415,15 +486,11 @@ body {
   text-align: center;
 }
 
+/* Header row */
 .cart-table th {
   background-color: #f5f5f5;
 }
 
-.cart-img {
-  width: 60px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
 
 /* QUANTITY INPUT */
 .qty-input {
@@ -439,13 +506,14 @@ body {
   border: none;
   padding: 6px 12px;
   border-radius: 5px;
-  cursor: pointer;
 }
 .remove-btn:hover {
   background: #b71c1c;
 }
 
-/* ORDER SUMMARY */
+/*---------------------------------------------------------------*/
+
+/* ORDER SUMMARY (CART) */
 .order-summary {
   max-width: 300px;
   background: #f9f9f9;
@@ -454,17 +522,24 @@ body {
   border: 1px solid #ddd;
   
 }
+
+/* Order Summary Title */
 .order-summary h3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
+
+/* Order Summary Items */
 .order-summary p {
   margin: 8px 0;
   font-size: 15px;
 }
+
+/* Align amounts to the right */
 .order-summary span {
   float: right;
 }
 
+/* CHECKOUT BUTTON */
 .checkout-btn {
   display: block;           /* make <a> or <button> behave like block */
   background: #d32f2f;
@@ -472,11 +547,9 @@ body {
   border: none;
   padding: 12px 20px;
   border-radius: 8px;
-  cursor: pointer;
   font-size: 16px;
   font-weight: bold;
   width: 60%;               /* not full width, looks more like a button */
-  max-width: 250px;         /* prevent it from becoming too wide */
   margin: 40px auto 0 auto; /* TOP=40px pushes it down, auto centers */
   text-align: center;       /* center text inside */
   text-decoration: none;    /* remove underline if <a> */
@@ -489,17 +562,7 @@ body {
 }
 
 
-
-/* PRODUCT LINKS */
-.product-box a {
-  text-decoration: none; /* removes underline */
-  color: inherit;        /* keeps text color consistent */
-}
-
-.product-box a:hover {
-  color: #c62828;        /* optional: hover color change */
-  text-decoration: none; /* make sure underline doesn’t return */
-}
+/*---------------------------------------------------------------*/
 
 
 
@@ -509,18 +572,16 @@ body {
   padding: 24px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  max-width: 600px;
+  max-width: 600px;     /* fixed width */
 }
 
-/* Section titles */
+/* Section titles (Billing Information / Shipping Address / Payment) */
 .checkout-form h3 {
-  margin-top: 40px;               /* more spacing before each section */
+  margin-top: 40px;            
   margin-bottom: 15px;
   font-size: 18px;
   color: #ec3118;
   border-bottom: 2px solid #ec3118;
-  display: block;
   padding-bottom: 4px;
 }
 
@@ -528,7 +589,7 @@ body {
   margin-top: 10px;               /* don’t push first heading too far */
 }
 
-/* Labels */
+/* Labels of forms */
 .checkout-form label {
   font-weight: bold;
   display: block;
@@ -539,17 +600,16 @@ body {
 /* Inputs & Select */
 .checkout-form input,
 .checkout-form select {
-  width: 70%;                     /* a bit wider but still not 100% */
+  width: 70%;   /*size of the boxes */                 
   max-width: 400px;
   padding: 8px 10px;
   margin-bottom: 14px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Focus effect */
+/* Focus effect when input something */
 .checkout-form input:focus,
 .checkout-form select:focus {
   border-color: #ec3118;
@@ -561,39 +621,37 @@ body {
 .checkout-form button {
   background: #d32f2f;
   color: #fff;
-  border: none;
   padding: 14px 24px;
   border-radius: 8px;
-  cursor: pointer;
   font-size: 16px;
   font-weight: bold;
   width: auto;                    /* don’t stretch across whole form */
   min-width: 180px;               /* consistent size */
   margin-top: 20px;
-  display: block;
 }
 
 .checkout-form button:hover {
   background: #b71c1c;
 }
 
+/*---------------------------------------------------------------*/
 
 
 /* CHECKOUT LAYOUT */
 .checkout-container {
   display: flex;
-  gap: 30px;
+  gap: 200px;          /* space between form and summary */
   align-items: flex-start; /* make both columns align at the top */
-  flex-wrap: wrap;         /* stack on smaller screens */
+  flex-wrap: wrap;     
 }
 
 .checkout-form {
   flex: 2;
-  min-width: 300px;
 }
 
+
+/* Order summary on the right */
 .order-summary {
-  flex: 1;
   min-width: 250px;
   background: #f9f9f9;
   padding: 20px;
@@ -603,7 +661,10 @@ body {
 }
 
 
-/* PRODUCT DETAIL PAGE */
+/*---------------------------------------------------------------*/
+
+
+/* PRODUCT DETAIL PAGE for each product */
 .product-detail-box {
   display: flex;
   gap: 40px;
@@ -614,6 +675,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Product image */
 .product-image img {
   width: 380px;
   height: auto;
@@ -622,12 +684,15 @@ body {
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
+/* Product info (name,color,brand, price, add to cart button) */
 .product-info-detail {
   flex: 1;
-  display: flex;
-  flex-direction: column;
+  display: flex; /* flexbox for vertical layout */
+  flex-direction: column; /* stack vertically */
+  justify-content: flex-start; /* align to top */
 }
 
+/* Product title */
 .product-info-detail h2 {
   margin-top: 0;
   font-size: 28px;
@@ -635,12 +700,14 @@ body {
   margin-bottom: 15px;
 }
 
+/* Product details (color,brand) */
 .product-info-detail p {
   margin: 6px 0;
   font-size: 15px;
   color: #444;
 }
 
+/* Price number */
 .product-info-detail .price {
   font-size: 26px;
   font-weight: bold;
@@ -648,42 +715,13 @@ body {
   margin: 20px 0 10px; /* tighten space above buttons */
 }
 
-/* Rating styling */
+/* Rating stars */
 .rating {
   font-size: 18px;
   margin: 12px 0;
   color: #fbc02d; /* gold stars */
 }
 
-/* Action buttons */
-
-
-.product-actions {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column; /* stack buttons vertically */
-  gap: 12px;              /* spacing between them */
-  align-items: center;
-}
-
-
-.add-cart {
-  display: block; 
-  background: #ec3118;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.add-cart:hover {
-  background: #c62828;
-  transform: translateY(-2px);
-}
 
 /* Button in product detail page aligned left */
 .add-cart-productzone {
@@ -707,23 +745,7 @@ body {
 }
 
 
-.buy-now {
-  display: block;
-  background: #ff9800;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.buy-now:hover {
-  background: #e68900;
-  transform: translateY(-2px);
-}
+/*---------------------------------------------------------------*/
 
 /* Product Tabs */
 .product-tabs {
@@ -734,6 +756,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+/* Titles in product detail (Description / Specification / Costumer Review) */
 .product-tabs h3 {
   margin-top: 25px;
   margin-bottom: 12px;
@@ -744,6 +767,7 @@ body {
   padding-bottom: 4px;
 }
 
+/* Text content for (Description / Specification / Costumer Review) */
 .product-tabs p,
 .product-tabs ul {
   font-size: 15px;

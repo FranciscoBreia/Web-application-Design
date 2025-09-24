@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login - TechBay SG</title>
+  <link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <a href="index.html" class="logo">TechBay SG</a>
+    <div class="header-right">
+      <a href="signup.html">Sign Up</a>
+      <a href="cart.html">🛒 Cart</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> > <span>Login</span>
+  </div>
+
+  <!-- CONTAINER -->
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+      <h3>Categories</h3>
+      <a href="smartphones.html">Smartphones</a>
+      <a href="tvs.html">TVs</a>
+      <a href="audio.html">Audio</a>
+      <a href="wearables.html">Wearables</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="maincontent login-page">
+      <h2>Login to Your Account</h2>
+      <p>Enter your email and password to access your account.</p>
+
+      <form action="login_process.php" method="post" class="login-form" onsubmit="return validateLoginForm()">
+        <label for="email">Email Address</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit" class="login-btn">🔑 Login</button>
+      </form>
+
+      <p class="signup-link">Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>© 2025 TechBay SG. All rights reserved.</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="shop.html">Shop</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="faq.html">FAQ</a>
+    </p>
+  </div>
+
+  <script src="validation.js"></script>
+</body>
+</html>

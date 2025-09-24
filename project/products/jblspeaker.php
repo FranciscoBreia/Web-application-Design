@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+// Load current cart count for header
+$cart = $_SESSION['cart'] ?? [];
+$cartCount = array_sum(array_column($cart, 'qty'));
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,17 +16,17 @@
 
   <!-- HEADER -->
   <div class="header">
-    <a href="../index.html" class="logo">TechBay SG</a>
+    <a href="../index.php" class="logo">TechBay SG</a>
     <div class="header-right">
-      <a href="../signup.html">Sign Up</a>
-      <a href="../cart.html">🛒 Cart</a>
+      <a href="../signup.php">Sign Up</a>
+      <a href="../cart.php">🛒 Cart (<?= $cartCount ?>)</a>
     </div>
   </div>
 
   <!-- BREADCRUMB -->
   <div class="breadcrumb">
-    <a href="../index.html">Home</a> > 
-    <a href="../audio.html">Audio</a> > 
+    <a href="../index.php">Home</a> > 
+    <a href="../audio.php">Audio</a> > 
     <span>JBL Bluetooth Speaker</span>
   </div>
 
@@ -29,10 +36,10 @@
     <!-- SIDEBAR -->
     <nav class="sidebar">
       <h3>Categories</h3>
-      <a href="../smartphones.html">Smartphones</a>
-      <a href="../tvs.html">TVs</a>
-      <a href="../audio.html">Audio</a>
-      <a href="../wearables.html">Wearables</a>
+      <a href="../smartphones.php">Smartphones</a>
+      <a href="../tvs.php">TVs</a>
+      <a href="../audio.php">Audio</a>
+      <a href="../wearables.php">Wearables</a>
     </nav>
 
     <!-- MAIN CONTENT -->
@@ -96,10 +103,10 @@
   <div class="footer">
     <p>© 2025 TechBay SG. All rights reserved.</p>
     <p>
-      <a href="../index.html">Home</a> |
-      <a href="../about.html">About</a> |
-      <a href="../contact.html">Contact</a> |
-      <a href="../faq.html">FAQ</a>
+      <a href="../index.php">Home</a> |
+      <a href="../about.php">About</a> |
+      <a href="../contact.php">Contact</a> |
+      <a href="../faq.php">FAQ</a>
     </p>
   </div>
 
